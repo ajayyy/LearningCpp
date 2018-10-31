@@ -1,18 +1,16 @@
 #include "pch.h"
+#include "Main.h"
 
-#include <SFML/Graphics.hpp>
+Main* mainClass;
+
+void update() {
+	mainClass->update();
+}
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1400, 800), "Window");
 
-	sf::Font font;
-	font.loadFromFile("res/arial.ttf");
-
-	sf::Text message;
-	message.setFont(font);
-	message.setString("Hello world");
-	message.setCharacterSize(100);
-	message.setFillColor(sf::Color::White);
+	mainClass = new Main();
 
 	while (window.isOpen()) {
 		sf::Event event;
@@ -25,9 +23,12 @@ int main() {
 		//clear screen
 		window.clear();
 
-		window.draw(message);
+		mainClass->render(&window);
 
 		window.display();
+
+		//update
+		update();
 	}
 
 	return 0;
