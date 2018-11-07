@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "Player.h"
 
-int speed = 10;
-
 Player::Player() {
 	rect.setSize(sf::Vector2f(50, 50));
 	rect.setFillColor(sf::Color::Red);
@@ -14,14 +12,22 @@ Player::~Player() {
 }
 
 void Player::render(sf::RenderWindow* window) noexcept {
-	rect.setPosition(*position);
-	window->draw(rect);
+	Entity::render(window);
 }
 
 void Player::update() noexcept {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-		position->y -= speed;
+		if (speed->y == 0) {
+			speed->y = -2;
+		}
 	}
+	
+	*position += *speed;
 
-	position->x += speed;
+	//gravity
+	if (position->y < window->getSize().y - rect.getSize().y) {
+		speed->y += 0.01f;
+	} else {
+		speed->y = 0;
+	}
 }
