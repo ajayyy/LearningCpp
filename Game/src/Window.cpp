@@ -10,7 +10,7 @@ void update() {
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1400, 800), "Window");
 
-	mainClass = new Main();
+	mainClass = new Main(new sf::Vector2f(1400, 800));
 
 	while (window.isOpen()) {
 		sf::Event event;

@@ -13,7 +13,9 @@ public:
 	Player* player;
 	Ground* ground;
 
-	Main();
+	sf::Vector2f* size;
+
+	Main(sf::Vector2f* size);
 	~Main();
 
 	void render(sf::RenderWindow* window) noexcept;

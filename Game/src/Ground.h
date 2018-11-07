@@ -1,5 +1,8 @@
 #include "pch.h"
 
+#ifndef GROUND_H
+#define GROUND_H
+
 #include "Entity.h"
 
 class Ground : public Entity {
@@ -11,3 +14,4 @@ class Ground : public Entity {
 		void update() noexcept;
 };
 
+#endif

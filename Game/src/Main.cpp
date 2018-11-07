@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "Main.h"
 
-Main::Main() {
+Main::Main(sf::Vector2f* size) {
+	this->size = size;
+
 	player = new Player(this);
 	ground = new Ground(this);
 }
