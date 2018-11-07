@@ -2,20 +2,26 @@
 
 #include <SFML/Graphics.hpp>
 
+//forward declare Main
+class Main;
+
 class Entity {
 
 public:
 	//gravity and movement
 	float gravityAccel = 10;
-	sf::Vector2f* speed = new sf::Vector2f(0.1f, 0);
-	sf::Vector2f* position = new sf::Vector2f(0, 500);
+	sf::Vector2f* speed;
+	sf::Vector2f* position;
 
 	sf::RectangleShape rect;
 
 	//window grabbed from last frame
 	sf::RenderWindow* window;
 
-	Entity();
+	//store of the main class
+	Main* main;
+
+	Entity(Main* main);
 	~Entity();
 
 	virtual void render(sf::RenderWindow* window) noexcept;

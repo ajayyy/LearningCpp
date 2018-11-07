@@ -1,9 +1,14 @@
 #include "pch.h"
 #include "Player.h"
 
-Player::Player() {
+#include "Main.h"
+
+Player::Player(Main* main) : Entity(main) {
 	rect.setSize(sf::Vector2f(50, 50));
 	rect.setFillColor(sf::Color::Red);
+
+	speed = new sf::Vector2f(0.1f, 0);
+	position = new sf::Vector2f(0, 500);
 }
 
 
@@ -25,7 +30,7 @@ void Player::update() noexcept {
 	*position += *speed;
 
 	//gravity
-	if (position->y < window->getSize().y - rect.getSize().y) {
+	if (position->y < window->getSize().y - rect.getSize().y - main->ground->rect.getSize().y) {
 		speed->y += 0.01f;
 	} else {
 		speed->y = 0;

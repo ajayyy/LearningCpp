@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "Entity.h"
 
-Entity::Entity() {
-
+Entity::Entity(Main* main) {
+	this->main = main;
 }
 
 Entity::~Entity() {

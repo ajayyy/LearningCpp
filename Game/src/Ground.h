@@ -1,11 +1,13 @@
-#pragma once
+#include "pch.h"
+
 #include "Entity.h"
 
-class Player : public Entity {
+class Ground : public Entity {
 	public:
-		Player(Main* main);
-		~Player();
+		Ground(Main* main);
+		~Ground();
 
 		void render(sf::RenderWindow* window) noexcept;
 		void update() noexcept;
 };
+

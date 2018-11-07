@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Ground.cpp" />
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Player.cpp" />
@@ -41,6 +42,7 @@
     <None Include="lib\sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Ground.h" />
     <ClInclude Include="src\Entity.h" />
     <ClInclude Include="src\Main.h" />
     <ClInclude Include="src\Player.h" />
