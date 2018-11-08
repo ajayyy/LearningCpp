@@ -7,6 +7,8 @@
 #include "Player.h"
 #include "Ground.h"
 
+#include <chrono>
+
 class Main {
 
 public:
@@ -14,6 +16,10 @@ public:
 	Ground* ground;
 
 	sf::Vector2f* size;
+
+	//variable used to make sure movements happen the same at different frame rates
+	double deltaTime;
+	std::chrono::duration<double> lastTime;
 
 	Main(sf::Vector2f* size);
 	~Main();
