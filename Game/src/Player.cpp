@@ -23,7 +23,7 @@ void Player::render(sf::RenderWindow* window) noexcept {
 void Player::update() noexcept {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
 		if (speed->y == 0) {
-			speed->y = -500;
+			speed->y = -700;
 		}
 	}
 	
@@ -31,7 +31,7 @@ void Player::update() noexcept {
 
 	//gravity
 	if (position->y < window->getSize().y - rect.getSize().y - main->ground->rect.getSize().y) {
-		speed->y += 800 * main->deltaTime;
+		speed->y += 1700 * (float) main->deltaTime;
 	} else {
 		speed->y = 0;
 	}
