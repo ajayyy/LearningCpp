@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Ground.h"
 
-
 #include "Main.h"
 
 Ground::Ground(Main* main) : Entity(main) {

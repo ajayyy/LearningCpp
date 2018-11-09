@@ -1,17 +1,19 @@
+#pragma once
+
 #include "pch.h"
-
-#ifndef GROUND_H
-#define GROUND_H
-
 #include "Entity.h"
 
+class Obstacle;
+
 class Ground : public Entity {
-	public:
-		Ground(Main* main);
-		~Ground();
 
-		void render(sf::RenderWindow* window) noexcept;
-		void update() noexcept;
+public:
+
+	std::vector<Obstacle> obstacles;
+
+	Ground(Main* main);
+	~Ground();
+
+	void render(sf::RenderWindow* window) noexcept;
+	void update() noexcept;
 };
-
-#endif
