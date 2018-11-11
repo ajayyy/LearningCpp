@@ -2,7 +2,7 @@
 
 #include "Main.h"
 
-Main::Main(sf::Vector2f* size) {
+Main::Main(sf::Vector2f size) {
 	this->size = size;
 
 	player = new Player(this);

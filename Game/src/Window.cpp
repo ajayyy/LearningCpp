@@ -10,7 +10,11 @@ void update() {
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1400, 800), "Window");
 
-	mainClass = new Main(new sf::Vector2f(1400, 800));
+	mainClass = new Main(sf::Vector2f(1400, 800));
+
+	{
+		Ground ground = Ground(mainClass);
+	}
 
 	while (window.isOpen()) {
 		sf::Event event;

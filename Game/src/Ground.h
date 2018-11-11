@@ -9,7 +9,7 @@ class Ground : public Entity {
 
 public:
 
-	std::vector<Obstacle> obstacles;
+	std::vector<Obstacle*> obstacles;
 
 	Ground(Main* main);
 	~Ground();

@@ -12,7 +12,7 @@ Entity::~Entity() {
 void Entity::render(sf::RenderWindow* window) noexcept {
 	this->window = window;
 
-	rect.setPosition(*position);
+	rect.setPosition(position);
 	window->draw(rect);
 }
 

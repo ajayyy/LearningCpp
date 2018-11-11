@@ -12,13 +12,13 @@ public:
 	Player* player;
 	Ground* ground;
 
-	sf::Vector2f* size;
+	sf::Vector2f size;
 
 	//variable used to make sure movements happen the same at different frame rates
 	double deltaTime;
 	std::chrono::duration<double> lastTime;
 
-	Main(sf::Vector2f* size);
+	Main(sf::Vector2f size);
 	~Main();
 
 	void render(sf::RenderWindow* window) noexcept;

@@ -10,8 +10,8 @@ class Entity {
 public:
 	//gravity and movement
 	float gravityAccel = 10;
-	sf::Vector2f* speed;
-	sf::Vector2f* position;
+	sf::Vector2f speed;
+	sf::Vector2f position;
 
 	sf::RectangleShape rect;
 
