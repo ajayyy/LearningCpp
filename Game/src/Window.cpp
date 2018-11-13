@@ -12,10 +12,6 @@ int main() {
 
 	mainClass = new Main(sf::Vector2f(1400, 800));
 
-	{
-		Ground ground = Ground(mainClass);
-	}
-
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {

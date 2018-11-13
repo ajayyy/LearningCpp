@@ -10,7 +10,8 @@ Main::Main(sf::Vector2f size) {
 }
 
 Main::~Main() {
-
+	delete player;
+	delete ground;
 }
 
 void Main::render(sf::RenderWindow* window) noexcept {
